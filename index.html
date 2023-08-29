@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    
+  
+    <div class="card">
+       
+        <div class="serch">
+            <input type="text" placeholder="Enter your City" spellcheck="false">
+            <button>  <img src="R.png"></button>
+        </div>
+    <div class="wheather">
+        <img src="shubhuuu34.png"class="wheather-icon" >
+        <h1 class="temp"> 0°C</h1>
+        <h2 class="city">Patna</h2>
+        <div class="details" >
+     <div class=" col1">
+     <img src="OIP.jpeg" >
+     <div>
+     <p class="humidity" color=black >50% </p>
+     <p>humidity</p>
+     </div>
+     </div>
+     <div class=" col2">
+        <img src="R (1).png" >
+        <div>
+        <p class="wind">15km/h</p>
+        <p>wind speed</p>
+        </div>
+        </div> 
+    </div>
+    </div>
+    </div>
+</body>
+   <script>
+const apikey="d6f31510f0517c975484059e30a797f0";
+const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const serchbox=document.querySelector(".serch input");
+const serchbtn=document.querySelector(".serch button");
+const wheatherIcon=document.querySelector(".wheather-icon")
+async function checkwheather(city){
+    const reponse=await fetch(apiUrl+city+`&appid=${apikey}`);
+    var data=await reponse.json();
+    console.log(data);
+    document.querySelector(".city").innerHTML=data.name;
+    document.querySelector(".temp").innerHTML=Math.round(data.main.temp)+"°C";
+    document.querySelector(".humidity").innerHTML=data.main.humidity+"%";
+    document.querySelector(".wind").innerHTML=data.wind.speed+"km/h";
+
+if(data.weather[0].main=="Clouds"){
+    wheatherIcon.src="cloudy.webp";
+}
+else if(data.weather[0].main=="Clear"){
+    wheatherIcon.src="suny clear.png";
+}
+else if(data.weather[0].main=="Rain"){
+    wheatherIcon.src="rain.jpeg";
+}
+else if(data.weather[0].main=="Drizzle"){
+    wheatherIcon.src="drizzil.jpeg";
+}
+else if(data.weather[0].main=="Mist"){
+    wheatherIcon.src="_mist-28-512.webp";
+}
+ document.querySelector(".wheather").style.display="block";
+
+ }
+
+// document.querySelector(".wheather").style.display="block";
+serchbtn.addEventListener("click",()=>{checkwheather(serchbox.value)
+    checkwheather(serchbox.value);
+})
+
+   </script>
+</html>

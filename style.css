@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+body{
+   background-color:rgb(16, 16, 16);
+   
+}
+
+/* body img{
+
+} */
+.card{
+    width: 80%;
+    max-width: 470px;
+    background-color: #589d9d;
+    color:#fff;
+    margin: 100px auto 0;
+    border-radius: 35px;
+    padding: 40px 35px;
+    text-align: center;
+    height: -12px;
+   
+}
+.serch{
+width: 95%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.serch input{
+    border: 0;
+    outline: 0;
+    background: #ebfffe;
+    color: rgb(14, 15, 15);
+    padding: 10px 25px;
+    flex:1;
+    margin-right: 16px;
+    border-radius: 16px;
+}
+.serch button{
+    border: 0;
+    outline: 0;
+    background: #ebfffe;
+    border-radius: 50%;
+    width: 55px;
+    height: 60px;
+}
+.serch button img{
+    width: 16px;
+}
+
+.wheather-icon{
+    
+    width: 85px;
+margin-right: 310px;
+border: black;
+/* margin-top: -11px; */
+}
+.wheather h1{
+font-size: 41px;
+font-weight: 508;
+forced-color-adjust: black;
+color: #000;
+margin-left: -7px;
+}
+.wheather h2{
+font-size: 37px;
+font-weight: 40;
+color: #000;
+margin-left: -9px;
+}
+.details img{
+    width: 55px;
+    border-radius: 34px;
+
+}
+.details p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    margin-left: 50px;
+    margin-block-end: 0cqh;
+    margin-top: 0cqi;
+    
+
+}
+
+.col1{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 253px;
+}
+
+.col1 img {
+    width: 30px;
+    width: 46px;
+    margin-left: -193px;
+    margin-bottom: -10px;
+}
+.col2{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 59px;
+}
+.col2 img{
+    margin-left: -4px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.wheather{
+    display: none;
+}
